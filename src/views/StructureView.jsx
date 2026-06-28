@@ -193,7 +193,7 @@ export default function StructureView({ id, focusBox }) {
             <div className="text-sm text-slate-600">
               {level === 3
                 ? <>Hoja en blanco · <span className="font-semibold tabular-nums">{totalWords} palabras</span></>
-                : <>Secciones: <span className="font-semibold tabular-nums">{filledCount}/{boxes.length}</span></>}
+                : <>Secciones: <span className="font-semibold tabular-nums">{filledCount}/{boxes.length}</span> · Total: <span className={`font-semibold tabular-nums ${totalWords >= (task === 1 ? 150 : 250) ? 'text-green-700' : 'text-slate-700'}`}>{totalWords}</span> palabras <span className="text-slate-400">/ {task === 1 ? 150 : 250}+</span></>}
             </div>
             <div className="flex items-center gap-2">
               {level === 1 ? (
